@@ -1,0 +1,22 @@
+<% if(success && success.length) { %>  
+    
+    <div class="flash success">
+            <p style="margin: 0;"><%=success%></p>
+            <button class="close-button">
+                <i class="fa-solid fa-x" style="font-size: 1.1rem;"></i>
+            </button>
+    </div>
+<% } %>    
+
+
+<% if(error && error.length) { %>
+
+    <div class="flash error-flash">
+        <p style="margin: 0;"><%= error %></p>
+        <button class="close-button">
+            <i class="fa-solid fa-x" style="font-size: 1.1rem;"></i>
+        </button>
+    </div>
+<% } %>
+
+<script src="/js/btnclose.js"></script>

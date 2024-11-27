@@ -1,0 +1,18 @@
+<% layout('./layouts/boilerplate.ejs')-%>
+
+<div class="newForm">
+    <form action="/login" method="post" novalidate class="needs-validation">
+        <div class="username">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" required>
+            <div class="invalid-feedback">Username is required</div>
+
+        </div>
+        <div class="password">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+            <div class="invalid-feedback">Password is required</div>
+        </div>
+        <button style="width: 5rem;">Log in</button>
+    </form>
+</div>
