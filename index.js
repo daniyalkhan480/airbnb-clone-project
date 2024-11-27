@@ -35,14 +35,14 @@ const userRoutes = require("./routes/user.js");
 const store = MongoStore.create({
     mongoUrl : dbLink,
     crypto : {
-        secret : "mysecretstring"
+        secret : process.env.SECRET,
     },
     touchAfter : 24*3600,
 });
 // Seesion options
 const sessionOptions = {
     store : store,
-    secret : "mysecretstring",
+    secret : process.env.SECRET,
     resave : false,
     saveUninitialized :true,
     cookie : {
